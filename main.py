@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import constants
 
-def get_related_sym_tweets(symbol: str)->None:
+def get_related_sym_tweets(symbol: str)-> pd.DataFrame:
         
     inner_tweets_df = pd.DataFrame(columns=[constants.PRIMARY_SYMBOL,constants.TWEET_TEXT,constants.TIMESTAMP])
     symbol_processor = StockTweetScraper(symbol.lower())
